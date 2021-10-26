@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {Area, Container, Header} from './App.style';
 import {Item} from './types/Item';
 import { ListItem} from './components/ListItem';
+import { AddArea } from './components/AddArea';
 
 
 const App = () =>{
@@ -14,7 +15,8 @@ return(
    <Area>
    <Header>Lista de Tarefas</Header>
 
-   {/* Área de adicionar nova tarefa*/}
+   <AddArea />
+   
    {list.map((item, index)=>(
        <ListItem key={index} item={item}/>
      ))}
